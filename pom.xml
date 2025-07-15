@@ -3,10 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>org.jenkins-ci.plugins</groupId>
-    <artifactId>plugin</artifactId>
-    <version>2.17</version>
-  </parent>
+  <groupId>org.jenkins-ci.plugins</groupId>
+  <artifactId>plugin</artifactId>
+  <version>4.64</version>
+</parent>
+
 
   <groupId>io.jenkins.blueocean</groupId>
   <artifactId>blueocean-parent</artifactId>
@@ -34,6 +35,7 @@
     <jenkins-test-harness.version>2.15</jenkins-test-harness.version>
     <scm-api.version>2.1.1</scm-api.version>
     <git.version>3.3.1</git.version>
+     <version>1.2.0-beta-2-SNAPSHOT</version>
   </properties>
 
   <scm>
