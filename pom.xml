@@ -646,6 +646,18 @@
   <version>1.7</version>
   <scope>provided</scope>
 </dependency>
+        <dependency>
+  <groupId>commons-logging</groupId>
+  <artifactId>commons-logging</artifactId>
+  <version>1.2</version> <!-- Add this -->
+</dependency><dependency>
+      <groupId>org.jenkins-ci.main</groupId>
+      <artifactId>jenkins-bom</artifactId>
+      <version>2.426.1</version> <!-- Replace this -->
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
+
 
     </dependencies>
   </dependencyManagement>
@@ -789,6 +801,12 @@
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>findbugs-maven-plugin</artifactId>
         </plugin>
+        <plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>animal-sniffer-maven-plugin</artifactId>
+  <version>1.20</version> <!-- Add a proper version -->
+</plugin>
+
     </plugins>
   </build>
 </project>
