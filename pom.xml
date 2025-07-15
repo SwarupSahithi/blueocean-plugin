@@ -36,6 +36,7 @@
     <scm-api.version>2.1.1</scm-api.version>
     <git.version>3.3.1</git.version>
      <version>1.2.0-beta-2-SNAPSHOT</version>
+      <jenkins.version>2.361</jenkins.version>
   </properties>
 
   <scm>
@@ -813,6 +814,11 @@
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>animal-sniffer-maven-plugin</artifactId>
   <version>1.20</version> <!-- Add a proper version -->
+</plugin>
+        <plugin>
+  <groupId>org.jenkins-ci.tools</groupId>
+  <artifactId>maven-hpi-plugin</artifactId>
+  <version>3.30</version> <!-- Or any version that supports your Jenkins core -->
 </plugin>
 
     </plugins>
