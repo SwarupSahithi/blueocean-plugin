@@ -805,22 +805,6 @@
             </configuration>
         </plugin>
 
-        <!-- run findbugs on all modules -->
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>findbugs-maven-plugin</artifactId>
-        </plugin>
-        <plugin>
-  <groupId>org.codehaus.mojo</groupId>
-  <artifactId>animal-sniffer-maven-plugin</artifactId>
-  <version>1.20</version> <!-- Add a proper version -->
-</plugin>
-        <plugin>
-  <groupId>org.jenkins-ci.tools</groupId>
-  <artifactId>maven-hpi-plugin</artifactId>
-  <version>3.30</version> <!-- Or any version that supports your Jenkins core -->
-</plugin>
-
     </plugins>
   </build>
 </project>
