@@ -167,7 +167,28 @@
     <classifier>runtime</classifier>
     <scope>test</scope>
   </dependency>
+        <dependency>
+      <groupId>io.jenkins.tools.bom</groupId>
+      <artifactId>bom-2.361.x</artifactId>
+      <version>5043.v855ff4819a_0f</version>
+      <type>pom</type>
+      <scope>import</scope>
+    </dependency>
 
+    <!-- Test libraries -->
+    <dependency>
+      <groupId>org.powermock</groupId>
+      <artifactId>powermock-module-junit4</artifactId>
+      <version>${powermock.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jacoco</groupId>
+      <artifactId>org.jacoco.agent</artifactId>
+      <version>${jacoco.version}</version>
+      <classifier>runtime</classifier>
+      <scope>test</scope>
+    </dependency>
   <!-- Omitted runtime modules; plugin BOM manages versions -->
 </dependencies>
 <build>
@@ -287,6 +308,23 @@
         </systemPropertyVariables>
       </configuration>
     </plugin>
+      <plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-enforcer-plugin</artifactId>
+  <version>3.6.0</version>
+  <executions>
+    <execution>
+      <id>no-duplicate-dependency-management</id>
+      <goals><goal>enforce</goal></goals>
+      <configuration>
+        <rules>
+          <banDuplicatePomDependencyVersions/>
+        </rules>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
+
   </plugins>
 </build>
 </project>
